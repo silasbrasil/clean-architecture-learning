@@ -1,6 +1,5 @@
 import { Category } from './category.entity';
 import { Income } from './income.entity';
-import { match } from 'fp-ts/Either';
 
 describe('Income Entity suite test', () => {
 
