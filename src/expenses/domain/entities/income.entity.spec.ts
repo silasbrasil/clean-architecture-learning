@@ -1,13 +1,11 @@
-import { Category } from './category.entity';
+import { Category } from '../value-objects/category.vo';
 import { Income } from './income.entity';
 
 describe('Income Entity suite test', () => {
-
   it('Should return a valid income entity', () => {
     // Given
     const category = new Category({
-      id: 'uuid',
-      name: 'category'
+      name: 'category',
     });
 
     const data = {
@@ -16,8 +14,8 @@ describe('Income Entity suite test', () => {
       date: new Date(),
       category: category,
       description: 'Salário',
-      createdAt: new Date()
-    }
+      createdAt: new Date(),
+    };
 
     // When
     const income = new Income(data);
@@ -46,8 +44,7 @@ describe('Income Entity suite test', () => {
 
   it.only('Should invalidate Income entity', () => {
     const category = new Category({
-      id: 'uuid',
-      name: 'category'
+      name: 'category',
     });
 
     const data = {
@@ -56,8 +53,8 @@ describe('Income Entity suite test', () => {
       date: new Date(),
       category: category,
       description: 'Salário',
-      createdAt: new Date()
-    }
+      createdAt: new Date(),
+    };
 
     const validIncome = new Income(data);
     const invalidIncome = new Income(null);

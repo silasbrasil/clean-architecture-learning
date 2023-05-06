@@ -1,18 +1,17 @@
-import { Category } from "./category.entity";
+import { Category } from './category.vo';
 
 describe('Category Entity suite test', () => {
   it('Should return a valid Category entity', () => {
     // Given
     const data = {
       id: 'uuid',
-      name: 'category'
-    }
+      name: 'category',
+    };
 
     // When
     const category = new Category(data);
 
     // Then
-    expect(category.id).toBeDefined();
     expect(category.name).toBeDefined();
   });
 
@@ -22,7 +21,6 @@ describe('Category Entity suite test', () => {
 
     // Then
     expect(category).toBeDefined();
-    expect(category.id).toBeUndefined();
     expect(category.name).toBeUndefined();
   });
 });
